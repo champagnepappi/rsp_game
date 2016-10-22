@@ -5,11 +5,15 @@
     </head>
     <body>
         <h1>Click the buttons to play</h1>
-        <form method="post" action="/play/create">
-            <input type="">
-            <a href="/" class="btn">Rock</a>
-            <a href="/" class="btn">Paper</a>
-            <a href="/" class="btn">Scissor</a>
+        <form method="post" action="/">
+          <input type="hidden" name="rock">
+          <button type='submit'>Rock</button>
+
+          <input type="hidden" name="paper">
+          <button type='submit'>Paper</button>
+
+          <input type="hidden" name="rock">
+          <button type='submit'>Scissors</button>
         </form>
     </body>
 </html>
