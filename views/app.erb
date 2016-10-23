@@ -6,14 +6,24 @@
     <body>
         <h1>Click the buttons to play</h1>
         <form method="post" action="/">
-          <input type="hidden" name="rock">
-          <button type='submit'>Rock</button>
+            <input type="hidden" name="rock">
+            <button type='submit'>Rock</button>
 
-          <input type="hidden" name="paper">
-          <button type='submit'>Paper</button>
+            <input type="hidden" name="paper">
+            <button type='submit'>Paper</button>
 
-          <input type="hidden" name="rock">
-          <button type='submit'>Scissors</button>
+            <input type="hidden" name="rock">
+            <button type='submit'>Scissors</button>
         </form>
+        <% if @computer_choice == @player_choice1 || @computer_choice == @player_choice2 ||
+               @computer_choice == @player_choice3
+           %>
+        <%# there is a tie %> 
+   <% elsif @computer_choice == @win[@player_choice1] || @computer_choice == @win[@player_choice2] ||
+       @computer_choice == @win[@player_choice3] %>
+    well done you win 
+   <% else %>
+        woouw 
+   <% end %>
     </body>
 </html>
